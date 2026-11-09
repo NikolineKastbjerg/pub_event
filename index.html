@@ -12,19 +12,143 @@
 <body>
   <header class="site-header">
     <div class="header-content">
-      <a class="site-logo" href="./">Eventnavn</a>
+      <a class="site-logo" href="./index.html">
+        <img src="./imgs/logo.png" alt="logo">
+      </a>
       <nav class="site-nav">
-        <button>Menu</button>
+        <button type="button" popovertarget="menu">Menu</button>
         <ul class="menu" id="menu" popover>
           <li><a href="./" aria-current="page">Forside</a></li>
-          <li><a href="./svg.html">Interaktiv SVG</a></li>
-          <li><a href="./form.html">Formular</a></li>
+          <li><a href="./svg.html">Rute</a></li>
+          <li><a href="./form.html">Opret navneskilt</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main></main>
+  <main>
+
+    <video class="video" autoplay muted loop playsinline src="./imgs/Video.mp4">hero video</video>
+
+    <div class="grid_card">
+      <article class="card">
+        <div>
+          <img src="./imgs/boks1.webp" alt="Folk der danser på bar">
+          <div class="card_content flow">
+            <h2 class="card_overskrift">Praktisk info</h2>
+            <ul>
+              <li>Mødetid: Kl. 20.00 foran Sørens Værtshus</li>
+              <li>Aldersgrænse: 20-35 år</li>
+              <li>Billetter: Book din billet via hjemmesiden</li>
+            </ul>
+            <button class="cta_card" popovertarget="card-details-1">Læs mere</button>
+          </div>
+        </div>
+        <div>
+          <div class="card_details flow" id="card-details-1" popover>
+            <img src="./imgs/boks1.webp" alt="Folk der danser på bar">
+            <h2>Praktisk info</h2>
+            <p>Buddie’s Pub Crawl starter kl. 20.00 foran Sørens Værtshus på Vandkunsten 6, 1467 København K. Vi samler
+              i alt 25
+              deltagere til en aften fyldt med fest, fællesskab og gode oplevelser.
+              Vi anbefaler, at du møder op i god tid, så alle er klar til at tage afsted sammen. Du kan opbevare din
+              jakke gratis i
+              garderoben på startstedet, så du slipper for at bære rundt på den resten af aftenen.
+              Husk gyldigt billed-ID, og tag dit gode humør med! Skynd dig at booke din billet, da der er et begrænset
+              antal pladser.
+              Vi glæder os til at se dig!</p>
+            <button class="cta_card" popovertarget="card-details-1">Luk</button>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div>
+          <img src="./imgs/boks2.webp" alt="venner der snakker ved bord">
+          <div class="card_content flow">
+            <h2 class="card_overskrift">Regler og god stil</h2>
+            <ul>
+              <li>Vis respekt for hinanden og personalet</li>
+              <li>Følg gruppen og hold tidsplanen</li>
+              <li>Stoffer er ikke tilladt</li>
+            </ul>
+            <button class="cta_card" popovertarget="card-details-2">Læs mere</button>
+          </div>
+        </div>
+        <div>
+          <div class="card_details flow" id="card-details-2" popover>
+            <img src="./imgs/boks2.webp" alt="venner der snakker ved bord">
+            <h2>Regler og god stil</h2>
+            <p>En god pub crawl handler om respekt, fællesskab og god energi. Vi forventer, at alle deltagere behandler
+              hinanden og
+              personalet med respekt og bidrager til en hyggelig og tryg atmosfære.
+              Det er ikke tilladt at medbringe eller indtage stoffer under arrangementet. Overtrædelse af denne regel
+              medfører
+              bortvisning.
+              Sammen sørger vi for, at alle får en sjov og mindeværdig aften!</p>
+            <button class="cta_card" popovertarget="card-details-2">Luk</button>
+          </div>
+        </div>
+      </article>
+      <article class="card">
+        <div>
+          <img src="./imgs/boks3.webp" alt="pige og dreng der spiller bordfodbold">
+          <div class="card_content flow">
+            <h2 class="card_overskrift">Aktiviteter på barene</h2>
+            <ul>
+              <li>Sjove spil</li>
+              <li>Konkurrencer</li>
+              <li>Musikbingo</li>
+            </ul>
+            <button class="cta_card" popovertarget="card-details-3">Læs mere</button>
+          </div>
+        </div>
+        <div>
+          <div class="card_details flow" id="card-details-3" popover>
+            <img src="./imgs/boks3.webp" alt="pige og dreng der spiller bordfodbold">
+            <h2>Aktiviteter på barene</h2>
+            <p>Hver bar byder på sin egen stemning og unikke oplevelser. Undervejs kan du deltage i sjove spil, udfordre
+              de andre
+              deltagere i konkurrencer eller teste din musikviden med musikbingo.
+              Der er rig mulighed for at møde nye mennesker, skabe gode minder og få nye venskaber. Gå på opdagelse
+              blandt barerne,
+              deltag i aktiviteterne, og vær med til at gøre Buddie’s Pub Crawl til en aften, du sent vil glemme!</p>
+            <button class="cta_card" popovertarget="card-details-3">Luk</button>
+          </div>
+        </div>
+      </article>
+
+      <div class="blå_bjaelke">
+        <div>
+          <h2 class="bjaelke_h2">Inkluderet</h2>
+          <ul>
+            <li>Et velkomstshot</li>
+            <li>En øl</li>
+            <li>Godt humør</li>
+            <li>Gratis entre til farfars bodega</li>
+          </ul>
+        </div>
+        <div class="book_her">
+          <h2 class="bjaelke_h2">Interesseret?</h2>
+          <a class="cta_book" href="./404.html">BOOK HER</a>
+        </div>
+      </div>
+    </div>
+    <div class="svg">
+      <div>
+        <img src="./imgs/eventsite.svg" alt="billede af de tre barer">
+      </div>
+      <div class="beige_boks">
+        <div>
+          <h2>Udforsk ruten:</h2>
+          <a href="./svg.html">Læs om de 3 stop</a>
+        </div>
+        <div>
+          <h2>Hvem er du i aften?</h2>
+          <a href="./form.html">Lav dit navneskilt</a>
+        </div>
+      </div>
+    </div>
+  </main>
 
   <footer class="site-footer">
     <div class="footer-content">
