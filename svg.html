@@ -12,13 +12,15 @@
 <body>
   <header class="site-header">
     <div class="header-content">
-      <a class="site-logo" href="./">Eventnavn</a>
+      <a class="site-logo" href="./index.html">
+        <img src="./imgs/logo.png" alt="logo">
+      </a>
       <nav class="site-nav">
-        <button>Menu</button>
+        <button type="button" popovertarget="menu">Menu</button>
         <ul class="menu" id="menu" popover>
           <li><a href="./">Forside</a></li>
-          <li><a href="./svg.html" aria-current="page">Interaktiv SVG</a></li>
-          <li><a href="./form.html">Formular</a></li>
+          <li><a href="./svg.html" aria-current="page">Rute</a></li>
+          <li><a href="./form.html">Opret navneskilt</a></li>
         </ul>
       </nav>
     </div>
@@ -27,29 +29,49 @@
   <main>
     <section class="svg-page">
       <header class="svg-intro">
-        <h1>Interaktiv SVG</h1>
-        <p>Indsæt din egen SVG og forbind den med punkterne nedenfor.</p>
+        <h1 class="rute">RUTE</h1>
+        <p>Her kan du få overblik over ruten for aftenen, og lærer de tre forskellige barer at kende</p>
       </header>
 
       <section class="svg-layout">
-        <div class="svg-placeholder"></div>
+        <div class="svg-placeholder">
+          <svg class="svg-bar" viewBox="0 0 961 561">
+            <use href="./imgs/eventsite.svg#bootleggers"></use>
+            <use href="./imgs/eventsite.svg#farfars"></use>
+            <use href="./imgs/eventsite.svg#sorens_veartshus"></use>
+            <use class="beer" href="./imgs/eventsite.svg#beer"></use>
+          </svg>
+        </div>
 
         <article class="panel">
           <h2>Udforsk eventet</h2>
           <div class="accordion">
-            <!-- TODO: Lav om til details/summary -->
-            <div class="accordion-item">
-              <h3>Punkt 1</h3>
-              <p>Beskriv første område, aktivitet eller del af dit event.</p>
-            </div>
-            <div class="accordion-item">
-              <h3>Punkt 2</h3>
-              <p>Beskriv andet område, aktivitet eller del af dit event.</p>
-            </div>
-            <div class="accordion-item">
-              <h3>Punkt 3</h3>
-              <p>Beskriv tredje område, aktivitet eller del af dit event.</p>
-            </div>
+            <details class="accordion-item" name="accordion" data-bar="sorens_veartshus" id="details-sorens_veartshus">
+              <summary>Sørens Værtshus</summary>
+              <div>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui maxime suscipit tempora, facere cupiditate
+                deserunt odio officiis similique aut culpa provident accusamus id nemo non quibusdam optio iusto.
+                Facere,
+                esse.
+              </div>
+            </details>
+            <details class="accordion-item" name="accordion" data-bar="farfars" id="details-farfars">
+              <summary>Farfars</summary>
+              <div>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui maxime suscipit tempora, facere cupiditate
+                deserunt odio officiis similique aut culpa provident accusamus id nemo non quibusdam optio iusto.
+                Facere,
+                esse.
+              </div>
+            </details>
+            <details class="accordion-item" name="accordion" data-bar="bootleggers" id="details-bootleggers">
+              <summary>Bootleggers</summary>
+              <div>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae, provident dignissimos placeat, suscipit
+                assumenda totam earum sunt repellat impedit quibusdam ipsum magnam saepe ex tempora et accusamus aliquid
+                tenetur! Labore.
+              </div>
+            </details>
           </div>
         </article>
       </section>
