@@ -12,23 +12,92 @@
 <body>
   <header class="site-header">
     <div class="header-content">
-      <a class="site-logo" href="./">Eventnavn</a>
+      <a class="site-logo" href="./">Buddie`s Pub Crawl</a>
       <nav class="site-nav">
         <button>Menu</button>
         <ul class="menu" id="menu" popover>
           <li><a href="./" aria-current="page">Forside</a></li>
-          <li><a href="./svg.html">Interaktiv SVG</a></li>
-          <li><a href="./form.html">Formular</a></li>
+          <li><a href="./svg.html">Rute</a></li>
+          <li><a href="./form.html">Opret navneskilt</a></li>
         </ul>
       </nav>
     </div>
+
+
   </header>
 
-  <main></main>
+  <main>
+    <section class="forsidevideo">
+
+
+      <video controls>
+        <source src="./video.mp4" type="video/mp4">
+      </video>
+
+
+    </section>
+
+    <section class="cards">
+      <article class="card">
+        <img src="./billeder/diskokugle.webp" alt="Diskokugle">
+        <h2>Praktisk info</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos aperiam possimus velit voluptate, rem unde
+          explicabo deleniti doloremque et necessitatibus, nobis, dolorem accusamus? Atque consequatur harum aliquam
+          nihil quam molestiae..</p>
+
+        <button popovertarget="praktisk-info">Læs mere</button>
+
+        <div id="praktisk-info" popover>
+          <h2>Praktisk info</h2>
+          <p>sted, tid, osv.</p>
+          <button popovertarget="praktisk-info">Luk</button>
+        </div>
+      </article>
+
+
+
+      </article>
+
+      <article class="card">
+        <img src="./billeder/venner.webp" alt="venner">
+        <h2>Regler og god stil</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis voluptatem blanditiis, eaque aliquid
+          illum nihil, odio praesentium recusandae magnam voluptates illo exercitationem eum laborum ad ut vero
+          excepturi laudantium deleniti.</p>
+        <a href="praktisk-info.html">Læs mere</a>
+      </article>
+
+      <article class="card">
+        <img src="./billeder/bordtennis.webp" alt="bordtennis">
+        <h2>Aktiviteter</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, quisquam expedita labore molestiae
+          asperiores eveniet eius temporibus numquam dolor earum cum odit obcaecati nesciunt commodi consectetur maxime.
+          Labore, magnam sit.</p>
+        <a href="praktisk-info.html">Læs mere</a>
+      </article>
+    </section>
+
+    <section class="inkluderet">
+      <h2>Inkluderet</h2>
+
+      <ul>
+        <li>Et velkomstshot</li>
+        <li>En øl</li>
+        <li>Godt humør</li>
+        <li>Gratis entré til farfars bodega</li>
+        <a href="form.html" class="book-knap">BOOK HER</a>
+      </ul>
+
+
+    </section>
+
+    <p>SVG</p>
+
+  </main>
 
   <footer class="site-footer">
     <div class="footer-content">
-      <p>Eventnavn</p>
+      <p>Buddie`s Pub Crawl</p>
       <p>Footer</p>
     </div>
   </footer>
