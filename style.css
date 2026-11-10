@@ -1,7 +1,7 @@
 /* Variabler */
 html {
   --color-page: #060235;
-  --color-surface: #fff;
+  --color-surface: #f3efdf;
   --color-text: #060235;
   --color-muted: #f3efdf;
   --color-border: #f3efdf;
@@ -72,9 +72,17 @@ main > * {
   @media (width > 600px) {
     grid-template-columns: min(40%, 50ch) 1fr;
   }
-
-  /************ Card *****************/
 }
+/************ Fonts *****************/
+
+.card_overskrift {
+  font-family: "Bungee Inline", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+/************ Card *****************/
+
 .grid_card {
   @media (width > 700px) {
     /*****desktop****/
@@ -101,6 +109,7 @@ main > * {
 .card {
   background-color: #f3efdf;
   border: 1px solid #f3efdf;
+  border-radius: 5px;
 }
 
 .card_content {
@@ -147,12 +156,18 @@ main > * {
   padding: 1rem;
   max-height: 90vh;
   max-width: 90vw;
-  width: 50ch;
+  width: 55ch;
   transition: 0.3s;
   transition-behavior: allow discrete;
   opacity: 0;
   rotate: 10deg;
   background: #f3efdf;
+  .img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    display: block;
+  }
 }
 .card_details:popover-open {
   display: grid;
@@ -171,10 +186,15 @@ main > * {
     rotate: -10deg;
   }
 }
+/**************** logo *****************/
 
+.logo {
+  max-width: 200px;
+  margin-top: 1.9rem;
+}
 /**************** Bjælke *****************/
 
-.blå_bjaelke {
+.rød_bjaelke {
   background-color: #7c0401;
   color: #f3efdf;
   grid-template-columns: inherit;
@@ -224,8 +244,48 @@ main > * {
 /**************** beige boks *************/
 .beige_boks {
   background-color: #f3efdf;
+  padding: 0.5rem;
+  margin-left: 5rem;
+  margin-right: 15rem;
+  border-radius: 10px;
+}
+.svg {
+  margin-left: 15rem;
+  img {
+    border-radius: 10px;
+  }
+}
+.cta_rute {
+  display: inline-block;
+  padding: 0.35rlh 0.75rlh;
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #9dbbd6;
+  color: #060235;
+  justify-self: start;
+  margin-top: 1.3rem;
+  border-radius: 10px;
+  border: 2px solid #060235;
+}
+.cta_navneskilt {
+  display: inline-block;
+  padding: 0.35rlh 0.75rlh;
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #7c0401;
+  color: #f3efdf;
+  justify-self: start;
+  margin-top: 1.3rem;
+  border-radius: 10px;
+  border: 2px solid #060235;
 }
 
+.boks_details {
+  padding: 1.9rem;
+}
+/**************** slut *************/
 .form-intro {
   display: grid;
   gap: var(--space-1);
@@ -309,8 +369,10 @@ main > * {
 
 .site-nav button {
   padding: 0.4rem 0.7rem;
+  color: #f3efdf;
+  border-radius: 5px;
   border: 1px solid var(--color-border);
-  background: var(--color-surface);
+  background: #060235;
   @media (width > 600px) {
     display: none;
   }
