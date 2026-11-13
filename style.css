@@ -382,7 +382,7 @@ main > * {
   margin: 0;
   padding: var(--space-1);
   list-style: none;
-  background: var(--color-surface);
+  background: #060235;
   border: 1px solid var(--color-border);
   position-area: bottom span-left;
   @media (width > 600px) {
@@ -427,12 +427,44 @@ main > * {
   min-height: -webkit-fill-available;
   min-height: stretch;
 }
-
+/********************** form ***************/
 .form-placeholder {
   min-height: -webkit-fill-available;
   min-height: stretch;
   padding: var(--space-1);
+  border-radius: 15px;
 }
+[data-layout="inline"] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1ch;
+}
+
+.h1_form {
+  color: #f3efdf;
+}
+.trin-nummer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #a6121f;
+  color: white;
+
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+
+  border-radius: 50%;
+  font-size: 20px;
+}
+.trin {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+/*************************************/
 
 /* Details */
 .accordion {

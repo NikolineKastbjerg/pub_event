@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap" rel="stylesheet">
+  <link rel="icon" href="./imgs/favicon.svg" type="image/svg+xml" />
   <title>Formular | Eventnavn</title>
   <link rel="stylesheet" href="./starter.css">
   <link rel="stylesheet" href="./style.css">
@@ -32,11 +33,102 @@
   <main>
     <section class="form-page">
       <header class="form-intro">
-        <h1>Formular</h1>
-        <p>Lav en formular, der sender brugeren videre til opsamlingssiden.</p>
+        <h1 class="h1_form">Opret dit navneskilt</h1>
+        <p>Lav et navneskilt så alle dine nye buddie's kan lære dig bedre at kende.</p>
+        <div class="intro-trin">
+          <div class="trin">
+            <span class="trin-nummer">01</span>
+            <p>Fortæl lidt om dig selv</p>
+          </div>
+
+          <div class="trin">
+            <span class="trin-nummer">02</span>
+            <p>Vis din personlighed</p>
+          </div>
+
+          <div class="trin">
+            <span class="trin-nummer">03</span>
+            <p>Få dit eget Buddie's navneskilt</p>
+          </div>
+        </div>
       </header>
 
-      <form class="form-placeholder" action="./opsamling.html"></form>
+      <form class="form-placeholder" action="./opsamling.html">
+        <h2>Lav dit navneskilt</h2>
+
+        <label for="navn">Navn:</label>
+        <input required id="navn" type="text" name="navn">
+        <p class="error-message" id="nickname-error">Skriv et navn</p>
+
+        <label for="alder">Alder:</label>
+        <input id="alder" type="url" name="alder">
+
+        <label for="yndlings_musik">Yndlings musik:</label>
+        <input id="yndlings_musik" type="url" name="yndlings_musik">
+
+        <label for="yndlings_drink">Yndlings drink:</label>
+        <input id="yndlings_drink" type="url" name="yndlings_drink">
+
+        <label for="hymør">Hvor højt er dit humør:</label>
+        <input id="humør" type="range" name="humør">
+
+        <fieldset>
+          <legend>Hvad glæder du sig mest til:</legend>
+          <label for="danse">
+            <input id="danse" type="radio" name="reason" value="danse" checked>
+            Danse
+          </label>
+          <label for="venskaber">
+            <input id="venskaber" type="radio" name="reason" value="venskaber">
+            Nye venskaber
+          </label>
+          <label for="Aktiviteter">
+            <input id="Aktiviteter" type="radio" name="reason" value="Aktiviteter">
+            Aktiviteterne
+          </label>
+          <label for="drikkelse">
+            <input id="drikkelse" type="radio" name="reason" value="drikkelse">
+            Gode øl og drinks
+          </label>
+          <label for="god_aften">
+            <input id="god_aften" type="radio" name="reason" value="god_aften">
+            Få en god aften/andet
+          </label>
+        </fieldset>
+
+        <fieldset class="form-group" data-layout="inline">
+          <legend>Vælg din yndlings farve, og match den til dit outfit</legend>
+          <label for="color-red" data-color="red">
+            <input class="color-input" type="radio" id="color-red" name="color" value="red">
+            <span class="visually-hidden">Rød</span>
+          </label>
+          <label for="color-lime" data-color="lime">
+            <input class="color-input" type="radio" id="color-lime" name="color" value="lime">
+            <span class="visually-hidden">Lime</span>
+          </label>
+          <label for="color-orange" data-color="orange">
+            <input class="color-input" type="radio" id="color-orange" name="color" value="orange" checked="">
+            <span class="visually-hidden">Orange</span>
+          </label>
+          <label for="color-pink" data-color="pink">
+            <input class="color-input" type="radio" id="color-pink" name="color" value="pink">
+            <span class="visually-hidden">Pink</span>
+          </label>
+          <label for="color-purple" data-color="purple">
+            <input class="color-input" type="radio" id="color-purple" name="color" value="purple">
+            <span class="visually-hidden">Lilla</span>
+          </label>
+          <label for="color-blue" data-color="blue">
+            <input class="color-input" type="radio" id="color-blue" name="color" value="blue">
+            <span class="visually-hidden">Blå</span>
+          </label>
+          <label for="color-teal" data-color="teal">
+            <input class="color-input" type="radio" id="color-teal" name="color" value="teal">
+            <span class="visually-hidden">Turkis</span>
+          </label>
+        </fieldset>
+        <button type="submit">Generer mit Pass</button>
+      </form>
     </section>
   </main>
 
