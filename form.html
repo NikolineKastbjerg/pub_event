@@ -7,6 +7,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alike&display=swap" rel="stylesheet">
+
+
   <title>Formular | Eventnavn</title>
   <link rel="stylesheet" href="./starter.css">
   <link rel="stylesheet" href="./style.css">
@@ -32,18 +38,132 @@
   <main>
     <section class="form-page">
       <header class="form-intro">
-        <h1>Formular</h1>
-        <p>Lav en formular, der sender brugeren videre til opsamlingssiden.</p>
+
+        <h2 class="h2_form">Hvem er du, når festen starter?</h2>
+        <p>Lav et navneskilt så alle dine nye Buddie’s kan lære dig at kende.</p>
+
+        <div class="intro_trin">
+          <div class="trin">
+            <span class="trin_nummer">01</span>
+            <p>Fortæl lidt om dig selv</p>
+          </div>
+
+          <div class="trin">
+            <span class="trin_nummer">02</span>
+            <p>Vis din personlighed</p>
+          </div>
+
+          <div class="trin">
+            <span class="trin_nummer">03</span>
+            <p>Få dit eget Buddie’s navneskilt</p>
+          </div>
+        </div>
       </header>
 
-      <form class="form-placeholder" action="./opsamling.html"></form>
+      <form class="form-placeholder" action="./opsamling.html">
+
+        <h2>
+          LAV DIT NAVNESKILT
+        </h2>
+
+        <div class="form-group">
+          <label for="Navn">Navn</label>
+          <input required id="Navn" type="text" name="navn">
+        </div>
+
+        <div class="form-group">
+          <label for="Alder">Alder</label>
+          <input required id="Alder" type="text" name="alder">
+        </div>
+
+        <div class="form-group">
+          <label for="Yndlings musik">Yndlings musik</label>
+          <input required id="Yndlings musik" type="text" name="musik">
+        </div>
+
+        <div class="form-group">
+          <label for="Yndlings drink">Yndlings drink</label>
+          <input required id="Yndlings drink" type="text" name="drink">
+        </div>
+
+        <div class="form-group">
+          <label for="Humear">Humør</label>
+          <input required id="Humear" type="range" name="Humear">
+        </div>
+
+
+        <fieldset class="form-group">
+          <legend>Hvad glæder jeg mig mest til?</legend>
+          <label for="danse">
+            <input id="danse" type="radio" name="reason" value="danse" checked>
+            At danse
+          </label>
+          <label for="venskaber">
+            <input id="venskaber" type="radio" name="reason" value="venskaber">
+            Få nye venskaber
+          </label>
+          <label for="aktiviteterne">
+            <input id="aktiviteterne" type="radio" name="reason" value="aktiviteterne">
+            Aktiviteterne
+          </label>
+          <label for="drikkelse">
+            <input id="drikkelse" type="radio" name="reason" value="drikkelse">
+            Gode øl & drinks
+          </label>
+
+          <label for="god_aften">
+            <input id="god_aften" type="radio" name="reason" value="god_aften">
+            At få en god aften/andet
+          </label>
+        </fieldset>
+
+
+
+
+
+        <fieldset class="form-farver" data-layout="inline">
+          <legend>Vælg din accentfarve</legend>
+          <label for="color-red" data-color="red">
+            <input class="color-input" type="radio" id="color-red" name="color" value="red">
+            <span class="visually-hidden">Rød</span>
+          </label>
+          <label for="color-lime" data-color="lime">
+            <input class="color-input" type="radio" id="color-lime" name="color" value="lime">
+            <span class="visually-hidden">Lime</span>
+          </label>
+          <label for="color-orange" data-color="orange">
+            <input class="color-input" type="radio" id="color-orange" name="color" value="orange" checked="">
+            <span class="visually-hidden">Orange</span>
+          </label>
+          <label for="color-pink" data-color="pink">
+            <input class="color-input" type="radio" id="color-pink" name="color" value="pink">
+            <span class="visually-hidden">Pink</span>
+          </label>
+          <label for="color-purple" data-color="purple">
+            <input class="color-input" type="radio" id="color-purple" name="color" value="purple">
+            <span class="visually-hidden">Lilla</span>
+          </label>
+          <label for="color-blue" data-color="blue">
+            <input class="color-input" type="radio" id="color-blue" name="color" value="blue">
+            <span class="visually-hidden">Blå</span>
+          </label>
+          <label for="color-teal" data-color="teal">
+            <input class="color-input" type="radio" id="color-teal" name="color" value="teal">
+            <span class="visually-hidden">Turkis</span>
+          </label>
+        </fieldset>
+
+        <button type="submit">Generer mit Pass</button>
+
+      </form>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="footer-content">
-      <p>Eventnavn</p>
-      <p>Footer</p>
+      <p>Buddie’s Pub Crawl</p>
+      <p>Digital Design Event</p>
+
     </div>
   </footer>
   <script src="./script.js"></script>
