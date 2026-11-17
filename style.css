@@ -84,6 +84,34 @@ main > * {
 
 .form-farver {
   display: flex;
+  border-radius: 15px;
+  padding: 8px;
+  gap: 8px;
+  input {
+    appearance: none;
+  }
+  input:checked {
+    outline: 2px solid black;
+    outline-offset: 2px;
+  }
+  #color1 {
+    background: #81c4ff;
+  }
+  #color2 {
+    background: #1305aa;
+  }
+  #color3 {
+    background: #be0c09;
+  }
+  #color4 {
+    background: #f6c552;
+  }
+  input:checked {
+    outline-offset: 1px;
+  }
+}
+.form-farver[data-color="red"] {
+  border-color: #7c0401;
 }
 
 form {
@@ -104,9 +132,6 @@ form {
 
   border-radius: 15px;
   padding: 10px;
-}
-.form-farver {
-  border-radius: 15px;
 }
 
 label:has(input:is([type="radio"], [type="checkbox"])) {
@@ -165,8 +190,17 @@ button {
 .trin {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
   margin-bottom: 16px;
+}
+
+.error-message {
+  display: none;
+  color: #7c0401;
+}
+
+.humear {
+  padding: 0;
 }
 
 /************ Fonts *****************/
@@ -176,6 +210,13 @@ button {
   font-weight: 300;
   font-style: normal;
   font-size: 22px !important;
+}
+
+.boks_svg {
+  font-family: "Bungee Inline", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 23px !important;
 }
 
 /************ Card *****************/
@@ -226,6 +267,7 @@ button {
   color: #f3efdf;
   justify-self: start;
   border-radius: 20px;
+  border: 2px solid #060235;
 
   font-family: "Alike", serif;
   font-weight: 400;
@@ -593,6 +635,13 @@ button {
   text-decoration: none;
 }
 /************** SVG **************/
+@view-transition {
+  navigation: auto;
+}
+
+.svg_billede {
+  view-transition-name: img;
+}
 
 /* Øllen */
 .svg-bar .beer {
@@ -664,6 +713,14 @@ html {
   /* Gør det muligt at animere til indholdets naturlige størrelse her. */
   interpolate-size: allow-keywords;
 }
+
+.punkt_svg {
+  padding: 1.5rem;
+  font-family: "Alike", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+}
 /********** SVG forside *************/
 
 .svg {
@@ -676,4 +733,127 @@ html {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+}
+
+/******************* dead link ******************/
+.dead_link {
+  color: #f3efdf;
+}
+
+/************ animationer ************/
+
+@keyframes apper-1 {
+  from {
+    opacity: 0;
+    translate: -20vw;
+    rotate: -5deg;
+  }
+}
+
+@keyframes apper-2 {
+  from {
+    opacity: 0;
+    translate: 20vw;
+    rotate: 5deg;
+  }
+}
+
+@keyframes progress {
+  from {
+    scale: 0 1;
+  }
+}
+
+html::before {
+  content: "";
+  block-size: 4px;
+  background-color: #d01a17;
+  position: fixed;
+  inset: 0;
+  animation: progress linear;
+  transform-origin: 0;
+  animation-timeline: scroll();
+}
+.svg_billede {
+  animation: apper-1 2s ease-out both;
+  animation-timeline: view();
+  animation-range: 8% 40%;
+}
+
+.beige_boks {
+  animation: apper-2 2s ease-out both;
+  animation-timeline: view();
+  animation-range: 8% 40%;
+}
+
+/********* navneskilt opsamling ***********/
+.navneskilt {
+  background-color: #f5f1df;
+  color: #08083f;
+  border: 8px solid #08083f;
+  border-radius: 24px;
+
+  padding: 11px;
+  width: 100%;
+  max-width: 900px;
+  margin: 40px auto;
+  box-sizing: border-box;
+}
+.navneskilt_top {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 25px;
+}
+.navn_alder h2 {
+  margin: 0;
+  font-size: 45px;
+}
+.navn_alder {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  align-items: center;
+
+  border: 5px solid #08083f;
+  border-radius: 30px;
+  padding: 15px;
+}
+
+.person {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+.navneskilt_info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.info_felt {
+  padding: 15px;
+  border-top: 3px solid #08083f;
+}
+
+.info_felt:nth-child(odd) {
+  border-right: 3px solid #08083f;
+}
+
+.info_felt p {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 0 5px;
+}
+
+.info_felt h2 {
+  font-size: 24px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.opsamling-placeholder {
+  border-radius: 24px;
+  padding-inline: 27px;
+}
+
+.opsamling_h1 {
+  color: #f5f1df;
 }
