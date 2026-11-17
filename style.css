@@ -84,6 +84,32 @@ main > * {
 
 .form-farver {
   display: flex;
+  border-radius: 15px;
+  padding: 8px;
+  gap: 8px;
+
+  input {
+    appearance: none;
+  }
+  input:checked {
+    outline: 2px solid #000;
+    outline-offset: 2px;
+  }
+  #color1 {
+    background: #81c4ff;
+  }
+
+  #color2 {
+    background: #1305aa;
+  }
+
+  #color3 {
+    background: #be0c09;
+  }
+
+  #color4 {
+    background: #f6c552;
+  }
 }
 
 form {
@@ -104,9 +130,6 @@ form {
 
   border-radius: 15px;
   padding: 10px;
-}
-.form-farver {
-  border-radius: 15px;
 }
 
 label:has(input:is([type="radio"], [type="checkbox"])) {
@@ -167,6 +190,19 @@ button {
   align-items: center;
   gap: 16px;
   margin-bottom: 16px;
+}
+
+.error-message {
+  display: none;
+}
+
+.form-group:has(:user-invalid) {
+  input {
+    outline: 2px solid red;
+  }
+  .error-message {
+    display: block;
+  }
 }
 
 /************ Fonts *****************/
@@ -675,5 +711,55 @@ html {
     /*****desktop****/
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+/********** animationer *************/
+
+.svg_billede {
+  animation: apper-1 2s ease-out both;
+  animation-timeline: view();
+  animation-range: 8% 40%;
+}
+
+@keyframes apper-1 {
+  from {
+    opacity: 0;
+    translate: -20vw;
+    rotate: -5deg;
+  }
+}
+
+.beige_boks {
+  animation: apper-2 2s ease-out both;
+  animation-timeline: view();
+  animation-range: 8% 40%;
+}
+
+@keyframes apper-2 {
+  from {
+    opacity: 0;
+    translate: 20vw;
+    rotate: 5deg;
+  }
+}
+
+html::before {
+  content: "";
+  block-size: 4px;
+  background-color: #d01a17;
+  position: fixed;
+  inset: 0;
+  animation: progress linear;
+  transform-origin: 0;
+  animation-timeline: scroll();
+}
+
+@keyframes progress {
+  from {
+    scale: 0 1;
+  }
+  to {
+    scale: 1 1;
   }
 }

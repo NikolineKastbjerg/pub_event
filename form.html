@@ -68,34 +68,42 @@
 
         <div class="form-group">
           <label for="Navn">Navn</label>
-          <input required id="Navn" type="text" name="navn">
+          <input required id="Navn" type="text" name="navn" value="Sophie">
+          <p class="error-message" id="navn-error">Skriv dit navn</p>
+        </div>
+
         </div>
 
         <div class="form-group">
           <label for="Alder">Alder</label>
-          <input required id="Alder" type="text" name="alder">
+          <input required id="Alder" type="text" name="alder" value="22">
+          <p class="error-message" id="alder-error">Skriv din alder</p>
         </div>
 
         <div class="form-group">
           <label for="Yndlings musik">Yndlings musik</label>
-          <input required id="Yndlings musik" type="text" name="musik">
+          <input required id="Yndlings musik" type="text" name="musik" value="Pop">
+          <p class="error-message" id="musik-error">Skriv dit yndlings musik</p>
         </div>
 
         <div class="form-group">
           <label for="Yndlings drink">Yndlings drink</label>
-          <input required id="Yndlings drink" type="text" name="drink">
+          <input required id="Yndlings drink" type="text" name="drink" value="Aperol Spritz">
+          <p class="error-message" id="drink-error">Skriv din yndlings drinks</p>
         </div>
 
         <div class="form-group">
           <label for="Humear">Humør</label>
-          <input required id="Humear" type="range" name="Humear">
+          <input required id="Humear" type="range" name="Humear" min="0" max="100" value="50">
+          <p class="error-message" id="Humear-error">Vælg dit humør</p>
         </div>
 
 
         <fieldset class="form-group">
+
           <legend>Hvad glæder jeg mig mest til?</legend>
           <label for="danse">
-            <input id="danse" type="radio" name="reason" value="danse" checked>
+            <input required id="danse" type="radio" name="reason" value="danse" checked>
             At danse
           </label>
           <label for="venskaber">
@@ -115,45 +123,34 @@
             <input id="god_aften" type="radio" name="reason" value="god_aften">
             At få en god aften/andet
           </label>
+          <p class="error-message" id="exited-error">Skriv hvad du glæder dig mest til</p>
         </fieldset>
-
-
 
 
 
         <fieldset class="form-farver" data-layout="inline">
-          <legend>Vælg din accentfarve</legend>
-          <label for="color-red" data-color="red">
-            <input class="color-input" type="radio" id="color-red" name="color" value="red">
-            <span class="visually-hidden">Rød</span>
+          <legend>Vælg din farve som evt kan matche til dit outfit</legend>
+          <label for="color1" data-color="color1">
+            <input class="color-input" type="radio" id="color1" name="color" value="color1">
+            <span class="visually-hidden">lyseblå</span>
           </label>
-          <label for="color-lime" data-color="lime">
-            <input class="color-input" type="radio" id="color-lime" name="color" value="lime">
-            <span class="visually-hidden">Lime</span>
+          <label for="color2" data-color="color2">
+            <input class="color-input" type="radio" id="color2" name="color" value="color2">
+            <span class="visually-hidden">blå</span>
           </label>
-          <label for="color-orange" data-color="orange">
-            <input class="color-input" type="radio" id="color-orange" name="color" value="orange" checked="">
-            <span class="visually-hidden">Orange</span>
+          <label for="color3" data-color="color3">
+            <input class="color-input" type="radio" id="color3" name="color" value="color3" checked="">
+            <span class="visually-hidden">rød</span>
           </label>
-          <label for="color-pink" data-color="pink">
-            <input class="color-input" type="radio" id="color-pink" name="color" value="pink">
-            <span class="visually-hidden">Pink</span>
+          <label for="color4" data-color="color4">
+            <input class="color-input" type="radio" id="color4" name="color" value="color4">
+            <span class="visually-hidden">gul</span>
           </label>
-          <label for="color-purple" data-color="purple">
-            <input class="color-input" type="radio" id="color-purple" name="color" value="purple">
-            <span class="visually-hidden">Lilla</span>
-          </label>
-          <label for="color-blue" data-color="blue">
-            <input class="color-input" type="radio" id="color-blue" name="color" value="blue">
-            <span class="visually-hidden">Blå</span>
-          </label>
-          <label for="color-teal" data-color="teal">
-            <input class="color-input" type="radio" id="color-teal" name="color" value="teal">
-            <span class="visually-hidden">Turkis</span>
-          </label>
+
+          <p class="error-message" id="farver-error">Vælg din yndlingsfarve</p>
         </fieldset>
 
-        <button type="submit">Generer mit Pass</button>
+        <button type="submit">Generer mit navneskilt</button>
 
       </form>
     </section>
