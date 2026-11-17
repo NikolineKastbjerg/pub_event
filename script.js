@@ -32,4 +32,8 @@ const opsamlingPlaceholder = document.querySelector(".opsamling-placeholder");
 if (opsamlingPlaceholder) {
   const params = new URLSearchParams(window.location.search);
   // Eksempel: params.get("navn") henter værdien fra et formularfelt med name="navn".
+  const navnOutput = document.querySelector(".navn-output");
+  const navn = params.get("navn");
+  //document.querySelector(".navn-output").textContent = params.get("navn")
+  navnOutput.textContent = navn;
 }
