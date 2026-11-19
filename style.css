@@ -203,6 +203,22 @@ button {
   padding: 0;
 }
 
+.error-message {
+  display: none;
+}
+
+.form-group:has(:required) {
+  label::after,
+  legend::after {
+    content: " *";
+  }
+}
+
+.form-group:has(:user-invalid) {
+  .error-message {
+    display: block;
+  }
+}
 /************ Fonts *****************/
 
 .card_overskrift {
@@ -403,12 +419,11 @@ button {
 .beige_boks {
   background-color: #f3efdf;
   padding: 0.5rem;
-  margin-left: 5rem;
-  margin-right: 15rem;
+  /* margin-left: 5rem;
+  margin-right: 15rem; */
   border-radius: 10px;
 }
 .svg {
-  margin-left: 15rem;
   img {
     border-radius: 10px;
   }
@@ -645,26 +660,37 @@ button {
 
 /* Øllen */
 .svg-bar .beer {
-  transition: translate 0.5s ease-in-out;
-  translate: var(--x, 0px) var(--y, 0px);
+  /* transition: translate 0.5s ease-in-out;
+  translate: var(--x, 0px) var(--y, 0px); */
+  transition: 2s;
+  offset-path: path(
+    "M582.94,459.81c-122.07-17.39-287.36-20.98-287.07-45.04.53-42.98,352.54-54.83,354.57-105.47.78-19.58-50.73-46.55-242.57-83.19"
+  );
+  offset-distance: var(--distance);
+  offset-anchor: 50% 50%;
+  offset-rotate: 0deg;
+  transform-box: fill-box;
 }
 
 /* Bootleggers */
 .svg-bar[data-position="bootleggers"] {
-  --x: -17%;
-  --y: -44%;
+  /* --x: -17%;
+  --y: -44%; */
+  --distance: 100%;
 }
 
 /* Farfars */
 .svg-bar[data-position="farfars"] {
-  --x: 6.4%;
-  --y: -29.8%;
+  /* --x: 6.4%;
+  --y: -29.8%; */
+  --distance: 73%;
 }
 
 /* Sørens Værtshus */
 .svg-bar[data-position="sorens_veartshus"] {
-  --x: -26.3%;
-  --y: -12.5%;
+  /* --x: -26.3%;
+  --y: -12.5%; */
+  --distance: 34%;
 }
 .rute {
   color: #f3efdf;
@@ -724,14 +750,14 @@ html {
 /********** SVG forside *************/
 
 .svg {
-  grid-template-columns: inherit;
   display: grid;
-  grid-column: 1 / -1;
-
+  grid-template-columns: 1fr;
+  margin: 0;
+  gap: 3%;
   @media (width > 700px) {
     /*****desktop****/
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 3%;
   }
 }
 
@@ -775,15 +801,19 @@ html::before {
   animation-timeline: scroll();
 }
 .svg_billede {
-  animation: apper-1 2s ease-out both;
-  animation-timeline: view();
-  animation-range: 8% 40%;
+  @media (width > 700px) {
+    animation: apper-1 2s ease-out both;
+    animation-timeline: view();
+    animation-range: 8% 40%;
+  }
 }
 
 .beige_boks {
-  animation: apper-2 2s ease-out both;
-  animation-timeline: view();
-  animation-range: 8% 40%;
+  @media (width > 700px) {
+    animation: apper-2 2s ease-out both;
+    animation-timeline: view();
+    animation-range: 8% 40%;
+  }
 }
 
 /********* navneskilt opsamling ***********/
@@ -791,13 +821,14 @@ html::before {
   background-color: #f5f1df;
   color: #08083f;
   border: 8px solid #08083f;
-  border-radius: 24px;
+  border-radius: 35px;
 
   padding: 11px;
   width: 100%;
   max-width: 900px;
   margin: 40px auto;
   box-sizing: border-box;
+  corner-shape: scoop;
 }
 .navneskilt_top {
   display: grid;
@@ -853,7 +884,91 @@ html::before {
   border-radius: 24px;
   padding-inline: 27px;
 }
+.opsamling-placeholder[data-color="color1"] {
+  .navneskilt {
+    border-color: #81c4ff;
+  }
+  .navn_alder {
+    border-color: #81c4ff;
+  }
+  .info_felt {
+    border-color: #81c4ff;
+  }
+}
 
+.opsamling-placeholder [data-color="color2"] {
+  .navneskilt {
+    border-color: #1305aa;
+  }
+  .navn_alder {
+    border-color: #1305aa;
+  }
+  .info_felt {
+    border-color: #1305aa;
+  }
+}
+.opsamling-placeholder[data-color="color3"] {
+  .navneskilt {
+    border-color: #be0c09;
+  }
+  .navn_alder {
+    border-color: #be0c09;
+  }
+  .info_felt {
+    border-color: #be0c09;
+  }
+}
+.opsamling-placeholder[data-color="color4"] {
+  .navneskilt {
+    border-color: #f6c552;
+  }
+  .navn_alder {
+    border-color: #f6c552;
+  }
+  .info_felt {
+    border-color: #f6c552;
+  }
+}
+
+input:checked {
+  outline-offset: 1px;
+}
 .opsamling_h1 {
   color: #f5f1df;
+}
+.person {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 23px;
+  padding-right: 80px;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.35rlh 0.75rlh;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #7c0401;
+  color: #f3efdf;
+  justify-self: start;
+  border-radius: 17px;
+  border: 2px solid #060235;
+
+  font-family: "Alike", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.button_nyt {
+  display: inline-block;
+  padding: 0.35rlh 0.75rlh;
+  text-decoration: none;
+  cursor: pointer;
+  color: #f3efdf;
+  justify-self: start;
+  border-radius: 17px;
+  border: 1px solid #f3efdf;
+
+  font-family: "Alike", serif;
+  font-weight: 400;
+  font-style: normal;
 }

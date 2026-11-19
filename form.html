@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Alike&display=swap" rel="stylesheet">
 
 
-  <title>Formular | Eventnavn</title>
+  <title>Buddie’s Pub Crawl</title>
   <link rel="stylesheet" href="./starter.css">
   <link rel="stylesheet" href="./style.css">
 </head>
@@ -68,63 +68,63 @@
 
         <div class="form-group">
           <label for="Navn">Navn</label>
-          <input required id="Navn" type="text" name="navn" value="Nikoline">
+          <input required id="Navn" type="text" name="navn">
           <p class="error-message" id="navn-error">Skriv dit navn</p>
         </div>
 
         <div class="form-group">
           <label for="Alder">Alder</label>
-          <input required id="Alder" type="text" name="alder" value="22">
+          <input required id="Alder" type="text" name="alder">
           <p class="error-message" id="alder-error">Skriv din alder</p>
         </div>
 
         <div class="form-group">
           <label for="Yndlings musik">Yndlings musik</label>
-          <input required id="Yndlings musik" type="text" name="musik" value="pop">
+          <input required id="Yndlings musik" type="text" name="musik">
           <p class="error-message" id="musik-error">Skriv dit yndlings musik</p>
         </div>
 
         <div class="form-group">
           <label for="Yndlings drink">Yndlings drink</label>
-          <input required id="Yndlings drink" type="text" name="drink" value="Mojito">
+          <input required id="Yndlings drink" type="text" name="drink">
           <p class="error-message" id="drink-error">Skriv din yndlings drink</p>
         </div>
 
         <div class="form-group">
-          <label for="Humear">Humør</label>
-          <input class="humear" required id="Humear" type="range" name="Humear" min="0" max="100" value="0">
-          <p class="error-message" id="Humear-error">Vælg dit humør</p>
+          <label for="humear">Humør</label>
+          <input class="humear" required id="humear" type="range" name="humear" min="0" max="100" value="0">
+          <p class="error-message" id="humear-error">Vælg dit humør</p>
         </div>
 
 
         <fieldset class="form-group">
           <legend>Hvad glæder jeg mig mest til?</legend>
-          <label for="danse">
-            <input required id="danse" type="radio" name="reason" value="danse" checked>
+          <label for="At danse">
+            <input id="At danse" type="radio" name="reason" value="At danse" checked>
             At danse
           </label>
-          <label for="venskaber">
-            <input id="venskaber" type="radio" name="reason" value="venskaber">
+          <label for="Få nye venskaber">
+            <input id="Få nye venskaber" type="radio" name="reason" value="Få nye venskaber">
             Få nye venskaber
           </label>
-          <label for="aktiviteterne">
-            <input id="aktiviteterne" type="radio" name="reason" value="aktiviteterne">
+          <label for="Aktiviteterne">
+            <input id="Aktiviteterne" type="radio" name="reason" value="Aktiviteterne">
             Aktiviteterne
           </label>
-          <label for="drikkelse">
-            <input id="drikkelse" type="radio" name="reason" value="drikkelse">
+          <label for="Gode øl & drinks">
+            <input id="Gode øl & drinks" type="radio" name="reason" value="Gode øl & drinks">
             Gode øl & drinks
           </label>
 
-          <label for="god_aften">
-            <input id="god_aften" type="radio" name="reason" value="god_aften">
+          <label for="At få en god aften">
+            <input id="At få en god aften" type="radio" name="reason" value="At få en god aften">
             At få en god aften
           </label>
           <p class="error-message" id="exited-error">Skriv hvad du glæder dig mest til</p>
         </fieldset>
 
         <fieldset class="form-farver" data-layout="inline">
-          <legend>Vælg en farve, så det evt. kan matche til dit outfit</legend>
+          <legend>Vælg en farve, som evt. kan matche til dit outfit</legend>
           <label for="color1" data-color="color1">
             <input class="color-input" type="radio" id="color1" name="color" value="color1">
             <span class="visually-hidden">Lyseblå</span>
@@ -142,7 +142,7 @@
             <span class="visually-hidden">Gul</span>
           </label>
 
-          <p class="error-message" id="farver-error">Vælg din yndlingsfarve</p>
+          <p class="error-message" id="farver-error">Vælg en farve</p>
         </fieldset>
 
         <button type="submit">Generer mit navneskilt</button>
