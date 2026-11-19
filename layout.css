@@ -1,0 +1,16 @@
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.grid_card {
+  /***mobil***/
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+
+  .card {
+    grid-column: span 1;
+  }
+}
